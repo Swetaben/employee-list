@@ -1,0 +1,31 @@
+<div class="container" ng-controller="editCtrl">
+    <h2> Edit Employee Form</h2>
+    <form>
+        <div class="form-group">
+            <label for="eid">Id</label>
+            <input type="number" ng-model="currentEmp.id" class="form-control" id="eid"  name="eid">
+        </div>
+        <div class="form-group">
+            <label for="firstname">Firt Name</label>
+            <input type="text" ng-model="currentEmp.firstname" class="form-control" id="firstname"  name="fname">
+        </div>
+        <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" ng-model="currentEmp.lastname" class="form-control" id="lastname"  name="lname">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" ng-model="currentEmp.email" class="form-control" id="email"  name="emailid">
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" ng-model="currentEmp.city" class="form-control" id="city"  name="cityname">
+        </div>
+        <div class="form-group">
+            <label for="dob">Age</label>
+            <input type="text" ng-model="currentEmp.age" class="form-control" id="dob"  name="dateofbirth">
+        </div>
+
+        <button type="button" class="btn btn-default" ng-click="saveEmp()">Save</button>
+    </form>
+</div>

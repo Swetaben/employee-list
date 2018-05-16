@@ -1,0 +1,18 @@
+<div id="loginbox" ng-controller="loginCtrl">
+    <div>
+        <form name="myForm">
+            <p>
+                <label>Enter Email Id: </label><br>
+                <input type="email" name="email" ng-model="login.email" required>
+                <span ng-show=" myForm.email.$invalid">The name is required.</span>
+            </p>
+            <br>
+            <label>Password</label><br>
+            <input type="password" name="pwd" ng-model="login.pwd" required>
+            <br>
+            <br>
+            <button ng-click="register()">Register</button>
+            <input ng-click="processlogin()" type="button" value="Login">
+        </form>
+    </div>
+</div>

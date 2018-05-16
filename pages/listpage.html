@@ -1,0 +1,33 @@
+<div ng-controller="tableCtrl">
+
+    <h1>Employee List</h1>
+
+    <button ng-click="gotoAddNew()">Add Employee</button>
+    <input type="text" ng-model="searchvalue" placeholder="Search for employee.">
+    <select ng-model="sortBy" ng-options="x for x in options">
+    </select>
+    <div>
+        <table class="table table-striped">
+            <thead>
+            <tr ng-click="alert('hi')">
+                <th>Id</th>
+                <th>Full Name</th>
+                <th>City</th>
+                <th>Age</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="y in data | filter : searchvalue | orderBy: getSortBy()">
+                <td>{{y.id}}</td>
+                <td>{{y.lastname}}, {{y.firstname}}</td>
+                <td>{{y.city}}</td>
+                <td>{{y.age}}</td>
+                <td><button ng-click="editClicked($index)"><span class="glyphicon glyphicon-edit"></span></button></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
